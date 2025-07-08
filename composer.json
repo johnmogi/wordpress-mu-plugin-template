@@ -1,0 +1,31 @@
+{
+    "name": "your-vendor/wordpress-mu-plugin",
+    "description": "A modern WordPress must-use plugin with Composer and PSR-4 autoloading",
+    "type": "wordpress-muplugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your.email@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "composer/installers": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ModernMU\\YourPluginName\\": "src/"
+        },
+        "files": ["src/helpers.php"]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
